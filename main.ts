@@ -52,7 +52,7 @@ const TEXT = "It's over. Every morning I fall for the bread — I get it golden,
 // gate also rejects whitespace-only text. Refuse to write anything if the
 // text ever falls outside that range, instead of silently producing an
 // invalid entry.
-if (TEXT.length < 1 || TEXT.length > 280) {
+if (TEXT.length < 1 || TEXT.length > 280 || TEXT.trim().length === 0) {
   throw new Error('TEXT must be 1-280 characters');
 }
 
